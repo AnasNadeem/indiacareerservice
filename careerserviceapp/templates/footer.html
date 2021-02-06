@@ -1,0 +1,40 @@
+ <!-- Footer Begins Here  -->
+ <section class="footerId">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 justify-content-center text-center footer-div">
+          <h4 class="footerH4">India Career Service</h4>
+          <p class="text-white">
+            {% for i in aboutUs %}
+              {{ i.desc }}
+            {% endfor %}
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 justify-content-center text-center footer-div">
+          <h4 class="footerH4">Navigation links</h4>
+          <li><a href="{% url 'Home' %}">Home</a></li>
+          <li><a href="{% url 'About' %}">About us</a></li>
+          <li><a href="{% url 'Contact' %}">Contact Us</a></li>
+          <li><a href="{% url 'JoinUs' %}">Join us</a></li>
+          <li><a href="{% url 'Register' %}">Registration</a></li>
+    
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12 justify-content-center text-center footer-div">
+          <h4 class="footerH4">Social Links</h4>
+        {% for i in social %}
+          <li><a class="{{ i.title_class }}" href="{{i.link}}">{{ i.title }} <i class="{{ i.logo_class }}" aria-hidden="true"></i></a>
+          </li>
+        {% endfor %}
+          </div>
+      </div>
+      <div class="mt-4 text-center">
+        <p class="text-white">Copyright <i class="far fa-copyright" aria-hidden="true"></i> <span
+            id="copyrightYear"></span> | All Right Reserved. Developed with <i class="fa fa-heart loveRC" aria-hidden="true"></i> by <a href="https://www.ripechilli.com" target="_blank" id="RipeChilli">RipeChilli</a> .
+        </p>
+      </div>
+      <div class="scrolltop float-right">
+        <i class="fa fa-arrow-up" id="myBtn"></i>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Ends Here  -->

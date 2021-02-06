@@ -1,0 +1,68 @@
+{% extends 'base.html' %} {% block mainCont %}
+{% load static %}
+<section class="aboutUs">
+  <div class="container">
+    <div class="row">
+      {% for i in aboutUs %}
+      <div class="col-lg-6 col-12">
+        <img
+          src="{{ i.image.url }}"
+          alt="India Career Service"
+          class="undrawImage"
+        />
+      </div>
+      <div class="col-lg-6 col-12">
+        <p class="aboutUsDesc">
+           {{ i.desc }}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="whyUs">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title">
+          <span>Why chose us?</span>
+          <h2>Make your career great</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+    {% for i in whyUs %}
+      <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+        <div class="whyUsCard text-center">
+          <i class="{{ i.logo }} whyLogo"></i>
+          <h4 class="whyUsCardTitle">{{ i.title }}</h4>
+          <p class="whyUsCardpara">
+            {{ i.desc }}
+          </p>
+        </div>
+      </div>
+      {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
+        </div>
+        <div class="row">
+      {% endif %}
+    {% endfor %}
+    
+    </div>    
+  </div>
+</section>
+<section class="ourAchievement">
+  <div class="container">
+    <div class="row">
+    {% for i in ourAchievement %}
+      <div class="col-lg-3 col-md-6 col-12 text-center">
+        <i class="{{ i.logo }} achivementIcon"></i>
+        <p class="numberIncreasing" id="num{{ forloop.counter }}">{{ i.number }}</p>
+        <p class="achievementTitle">{{ i.title }}</p>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include 'footer.html' %}
+{% endblock mainCont %}

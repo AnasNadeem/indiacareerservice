@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- StyleIndex CSS  -->
+    <link rel="stylesheet" href="{% static 'css/styleindex.css' %}">
+    <!-- Font awesome css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+    <!-- Google Fonts  -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Quicksand:wght@300;400&display=swap"
+        rel="stylesheet"> -->
+    <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
+    <title>Scholarship</title>
+</head>
+
+<body>
+    <!-- Preloader Begins Starts Here  -->
+    <!-- <div id="preloder">
+		<div class="loader"></div>
+	</div> -->
+    <!-- Preloader Begins Ends Here  -->
+    {% url 'Home' as index_url %}
+    {% url 'About' as about_url %}
+    {% url 'JoinUs' as join_url %}
+    {% url 'Contact' as contact_url %}
+    {% url 'Register' as register_url %}
+    <!-- Navbar Begins  -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light" id="navbarTop">
+        <div class="container">
+            <a class="navbar-brand" href="{{ index_url }}">INDIA CAREER SERVICE</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == index_url %} active {% endif %}" href="{{ index_url }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == about_url %} active {% endif %}" href="{{ about_url }}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == contact_url %} active {% endif %}" href="{{ contact_url }}">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == join_url %} active {% endif %}" href="{{ join_url }}">Join Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == register_url %} active {% endif %}" href="{{ register_url }}">Registration Form</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Ends  -->
+
+    {% block mainCont %}{% endblock mainCont %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- FontAwesome JS  -->
+    <!-- <script src="https://kit.fontawesome.com/7a10e3388d.js" crossorigin="anonymous"></script> -->
+    <!-- Preloader JS  -->
+    <script src="{% static 'js/theboss.js' %}"></script>
+</body>
+
+</html>

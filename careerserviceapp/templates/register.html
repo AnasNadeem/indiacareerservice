@@ -1,0 +1,242 @@
+{% extends 'base.html' %} {% block mainCont %}
+{% if messages %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Hooray!!</strong> 
+  {%for i in messages%}
+    {{i}}
+  {%endfor%}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+  
+{% endif %}
+<!-- Main Register Form Begins  -->
+<section class="mainForm">
+  <div class="container">
+    <!-- <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title">
+            <span>Registraion Form</span>
+            <h2>Submit Form</h2>
+          </div>
+        </div>
+      </div> -->
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <form action="" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="card">
+            <div class="card-header">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-primary cardHeaderBtn btn-block text-left"
+                >
+                  Personal Details
+                </button>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input
+                  type="text"
+                  class="form-control inputFormInput"
+                  name="student_name"
+                  id="studentName"
+                  placeholder="Name of the Student"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="fatherName">Father's Name</label>
+                <input
+                  type="text"
+                  class="form-control inputFormInput"
+                  name="father_name"
+                  id="fatherName"
+                  placeholder="Father's Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input
+                  type="text"
+                  class="form-control inputFormInput"
+                  name="phone_number"
+                  id="phoneNumber"
+                  placeholder="Phone Number"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="birthDate">Date Of Birth</label>
+                <input
+                  type="date"
+                  class="form-control inputFormInput"
+                  name="date_of_birth"
+                  id="birthDate"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="emailName">Email</label>
+                <input
+                  type="email"
+                  class="form-control inputFormInput"
+                  name="email"
+                  id="emailName"
+                  placeholder="Email of the Student"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input
+                  type="text"
+                  class="form-control inputFormInput"
+                  name="address"
+                  id="inputAddress"
+                  placeholder="221B Baker Street"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputZip">PIN Code</label>
+                  <input
+                    type="text"
+                    class="form-control inputFormInput"
+                    name="pin_code"
+                    id="inputZip"
+                    placeholder="PIN Code"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputCity">City</label>
+                  <input
+                    type="text"
+                    class="form-control inputFormInput"
+                    name="city"
+                    id="inputCity"
+                    placeholder="City Name"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState">State</label>
+                  <input
+                    type="text"
+                    class="form-control inputFormInput"
+                    name="state"
+                    id="inputState"
+                    placeholder="State Name"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-primary cardHeaderBtn btn-block text-left"
+                >
+                  Documents
+                </button>
+              </h2>
+            </div>
+
+            <div class="card-body">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="marksSheetTenth">10th MarkSheet</label>
+                  <input
+                    type="file"
+                    class="form-control-file"
+                    name="matric_marksheet"
+                    id="marksSheetTenth"
+                    accept="image/jpg, image/jpeg, image/png, application/pdf"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="marksSheetTwelve">12th MarkSheet</label>
+                  <input
+                    type="file"
+                    class="form-control-file"
+                    name="twelth_marksheet"
+                    id="marksSheetTwelve"
+                    accept="image/jpg, image/jpeg, image/png, application/pdf"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="adharCard">Adhar Card</label>
+                  <input
+                    type="file"
+                    class="form-control-file"
+                    name="adhar_card"
+                    id="adharCard"
+                    accept="image/jpg, image/jpeg, image/png, application/pdf"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="passportSizePhoto">Passport Size Photo</label>
+                  <input
+                    type="file"
+                    class="form-control-file"
+                    name="passport_size_photo"
+                    id="passportSizePhoto"
+                    accept="image/jpg, image/jpeg, image/png, application/pdf"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="tranferCertificate">Transfer Certicate</label>
+                  <input
+                    type="file"
+                    class="form-control-file"
+                    name="transfer_certificate"
+                    id="tranferCertificate"
+                    accept="image/jpg, image/jpeg, image/png, application/pdf"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="migrationCertificate">Migration Certicate</label>
+                  <input
+                    type="file"
+                    class="form-control-file"
+                    name="migration_certificate"
+                    id="migrationCertificate"
+                    accept="image/jpg, image/jpeg, image/png, application/pdf"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6 offset-md-4">
+                  <label for="jeemainsCertificate">If JEEMAINS given</label>
+                  <input
+                    type="file"
+                    class="form-control-file"
+                    name="jee_mains"
+                    id="jeemainsCertificate"
+                    accept="image/jpg, image/jpeg, image/png, application/pdf"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary submitBtn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Main Register Form Ends  -->
+
+{% endblock mainCont %}

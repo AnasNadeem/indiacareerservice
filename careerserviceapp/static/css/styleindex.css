@@ -1,0 +1,598 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Acme', sans-serif; */
+  font-family: "Muli", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.text-white p,
+.text-white span,
+.text-white li,
+.text-white a {
+  color: #ffffff;
+}
+
+:root {
+  --mainCol: #f36100;
+}
+/* 1rem = 16px */
+/* Universal CSS Ends  */
+/* Navbar CSS Begins  */
+.nav-item a {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.nav-item .active {
+  color: var(--mainCol) !important;
+}
+/* Navbar CSS Ends  */
+
+/* mainSec Section Begins  */
+.mainSec {
+  height: auto;
+  width: 100%;
+  margin-top: 8rem;
+}
+
+.undrawImage {
+  height: 25rem;
+  width: 100%;
+}
+
+.mainText {
+  margin-top: 6rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mainText strong {
+  color: var(--mainCol);
+}
+
+.registerBtn{
+  border: 2px solid var(--mainCol);
+  border-radius: 6rem;
+  margin: 0 0.4rem;
+  padding: 1rem 1.5rem;
+  outline: none;
+  background: var(--mainCol);
+  color: #ffffff !important;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* mainSec Section Ends  */
+
+/* WhyUs Section Begins  */
+.whyUs {
+  height: auto;
+  width: 100%;
+  background: #f8f9fa;
+  padding-bottom: 70px;
+  padding-top: 20px;
+  margin-top: 5rem;
+}
+
+.section-title {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.section-title span {
+  font-size: 20px;
+  color: var(--mainCol);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section-title h2 {
+  /* color: #ffffff; */
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.whyUsCard {
+  margin-top: 15px;
+}
+
+.whyUsCard:hover .whyLogo {
+  background: #f8f9fa;
+  color: var(--mainCol);
+}
+.whyLogo {
+  height: 90px;
+  padding-top: 24px;
+  font-size: 40px;
+  width: 90px;
+  background: var(--mainCol);
+  border-radius: 50%;
+  display: inline-block;
+  color: #ffffff;
+  line-height: 90px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.whyUsCardTitle {
+  /* color: #ffffff; */
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.whyUsCardpara {
+  /* color: #fff; */
+  font-size: 1rem;
+  font-weight: 400;
+}
+/* WhyUs Section Ends  */
+/* honestReview Section Begins  */
+.honestReview{
+  height: auto;
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  background-color: var(--mainCol);
+}
+
+.honestReviewCardImage{
+  height: 6rem;
+  border-radius: 50%;
+  width: 6rem;
+}
+
+.honestReviewCardTitle{
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0.5rem;
+}
+
+.honestReviewCardPara{
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+
+}
+
+.section-title-review {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.section-title-review span {
+  font-size: 36px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section-title-review h2 {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+/* honestReview Section Ends  */
+
+
+/* Contact Us CSS Begins  */
+.contactUs {
+  background: #ffffff;
+  padding-bottom: 40px;
+  padding-top: 80px;
+}
+
+.contactUsMain {
+  padding-top: 60px;
+  background: #f8f9fa;
+  padding-bottom: 40px;
+}
+.section-title.contact-title {
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+.contact-widget .contactUsIcons {
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+
+.contact-widget .contactUsIcons i {
+  font-size: 30px;
+  color: #ffffff;
+  display: inline-block;
+  height: 65px;
+  width: 65px;
+  background: var(--mainCol);
+  border-radius: 50%;
+  line-height: 65px;
+  text-align: center;
+  float: left;
+  margin-right: 20px;
+}
+
+.contact-widget .contactUsIcons p {
+  overflow: hidden;
+  color: #000000;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.contact-widget .contactUsIcons ul {
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.contact-widget .contactUsIcons ul li {
+  list-style: none;
+  font-size: 14px;
+  color: #000000;
+  margin-right: 25px;
+  display: inline-block;
+  position: relative;
+}
+
+.contact-widget .contactUsIcons ul li:after {
+  position: absolute;
+  right: -18px;
+  top: 0;
+  content: "|";
+  color: #545454;
+}
+
+.contact-widget .contactUsIcons ul li:last-child {
+  margin-right: 0;
+}
+
+.contact-widget .contactUsIcons ul li:last-child:after {
+  display: none;
+}
+
+.contact-widget .contactUsIcons.email p {
+  padding-top: 20px;
+}
+
+.leave-comment h5 {
+  font-size: 24px;
+  color: var(--mainCol);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.leave-comment form input {
+  font-size: 13px;
+  color: #000000;
+  width: 100%;
+  height: 46px;
+  border: 1px solid #363636;
+  padding-left: 20px;
+  padding-right: 5px;
+  background: transparent;
+  margin-bottom: 20px;
+}
+
+.leave-comment form input::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.leave-comment form input::-moz-placeholder {
+  color:#000000;
+}
+
+.leave-comment form input:-ms-input-placeholder {
+  color:#000000;
+}
+
+.leave-comment form input::-ms-input-placeholder {
+  color:#000000;
+}
+
+.leave-comment form input::placeholder {
+  color:#000000;
+}
+
+.leave-comment form textarea {
+  font-size: 13px;
+  color: #000000;
+  width: 100%;
+  height: 100px;
+  border: 1px solid #363636;
+  padding-left: 20px;
+  padding-top: 12px;
+  padding-right: 5px;
+  background: transparent;
+  margin-bottom: 14px;
+  resize: none;
+}
+
+.leave-comment form textarea::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.leave-comment form textarea::-moz-placeholder {
+  color: #000000;
+}
+
+.leave-comment form textarea:-ms-input-placeholder {
+  color: #000000;
+}
+
+.leave-comment form textarea::-ms-input-placeholder {
+  color: #000000;
+}
+
+.leave-comment form textarea::placeholder {
+  color: #000000;
+}
+
+.leave-comment form button {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+  border: none;
+  background: #f36100;
+  border: 2px solid #f36100;
+  border-radius: 110px;
+  padding: 12px 30px;
+  outline: none;
+  text-align: center;
+}
+
+.map {
+  height: 550px;
+  margin-top: 35px;
+}
+
+.map iframe {
+  width: 100%;
+}
+
+/* Contact Us CSS Ends  */
+
+/* mainForm Section CSS Begins  */
+.mainForm{
+  height: auto;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.cardHeaderBtn{
+  background-color: var(--mainCol) !important;
+  border: none;
+}
+
+.submitBtn{
+  background-color: var(--mainCol);
+  width: 100%;
+  color: #ffffff;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  border: none;
+}
+
+/* mainForm Section CSS Ends  */
+
+/* ourAchievement Section CSS Begins */
+.ourAchievement{
+  width: 100%;
+  height: auto;
+  /* background-color: #ffffff; */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.achivementIcon{
+  font-size: 3rem;
+  color: var(--mainCol);
+
+}
+
+.numberIncreasing{
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
+  color: #000000;
+
+}
+
+.achievementTitle{
+  font-size: 1.4rem;
+  color: var(--mainCol);
+  font-weight: 600;
+
+
+}
+/* ourAchievement Section CSS Ends */
+/* Footer Begins  */
+.footerId {
+  width: 100%;
+  height: auto;
+  padding: 70px 0 20px 0;
+  background: var(--mainCol);
+  position: relative;
+}
+
+.footer-div h4 {
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 1.2rem !important;
+  font-weight: 600;
+}
+
+.footer-div li a {
+  line-height: 1.2;
+  font-weight: 400;
+  color: #fff;
+}
+
+.fbitext:hover {
+  color: #3b5998 !important;
+}
+
+.twitext:hover {
+  color: #00acee !important;
+}
+
+.insitext:hover {
+  color: #bc2a8d !important;
+}
+
+.youtubetext:hover {
+  color: #c4302b !important;
+}
+
+.fbi {
+  color: #3b5998;
+}
+
+.twi {
+  color: #00acee;
+}
+
+.insi {
+  color: #bc2a8d;
+}
+
+.yti {
+  color: #c4302b;
+}
+
+#copyrightYear {
+  color: #ffffff;
+}
+
+#RipeChilli {
+  color: #ffffff;
+}
+.loveRC {
+  color: #ffffff;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 99;
+  border: none;
+  color: var(--mainCol);
+  background: #151515;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  color: var(--mainCol);
+  background: #0a0a0a;
+}
+
+/* Footer Ends  */
+
+/* aboutUs Section Begins  */
+.aboutUs{
+  width: 100%;
+  height: auto;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+}
+
+.aboutUsDesc{
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: .02rem;
+}
+/* aboutUs Section Ends  */
+/* Join Us section Begins  */
+.hiringMain{
+  width: 100%;
+  height: auto;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+
+}
+
+.mainHiringText{
+  margin-top: 6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mainHiringText strong{
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--mainCol);
+}
+/* Join Us section Ends  */
+/* Media Queries Begins  */
+@media (max-width: 399px) {
+  .mainSec{
+    margin-top: 0rem;
+  }
+  .mainText{
+    margin-top: 0rem;
+  }
+  .aboutUs{
+    margin-top: 0rem;
+  }
+  .hiringMain{
+    margin-top: 0rem;
+  }
+  .mainHiringText{
+    margin-top: 0rem;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 576px) {
+  .mainSec{
+    margin-top: 0rem;
+  }
+  .mainText{
+    margin-top: 0rem;
+  }
+  .aboutUs{
+    margin-top: 0rem;
+  }
+  .hiringMain{
+    margin-top: 0rem;
+  }
+  .mainHiringText{
+    margin-top: 0rem;
+  }
+}
+/* Media Queries Ends  */

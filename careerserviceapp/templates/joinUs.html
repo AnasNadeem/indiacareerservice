@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block mainCont %}
+{% load static %}
+<!-- Hiring Main Sec Begins  -->
+<section class="hiringMain">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-12">
+        <img
+          src="{% static 'images/undraw_software_engineer_lvl5.svg' %}"
+          alt=""
+          class="undrawImage"
+        />
+      </div>
+      <div class="col-lg-4 col-12">
+        <p class="mainHiringText">
+          Hooray!! <br />
+          We are <br />
+          <strong>Hiring..</strong>
+        </p>
+        <a href="tel:+919470289271" class="btn registerBtn">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Hiring Main Sec Ends  -->
+{% endblock mainCont %}
