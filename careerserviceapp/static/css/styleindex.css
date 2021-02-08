@@ -393,7 +393,7 @@ li {
 }
 
 .submitBtn{
-  background-color: var(--mainCol);
+  background-color: var(--mainCol) !important;
   width: 100%;
   color: #ffffff;
   margin-top: 2rem;

@@ -47,6 +47,7 @@
                   placeholder="Name of the Student"
                   required
                 />
+                <small id="studentNameAlert" class="smallValidation">Name should be of 2 to *40 characters</small>
               </div>
               <div class="form-group">
                 <label for="fatherName">Father's Name</label>
@@ -58,17 +59,19 @@
                   placeholder="Father's Name"
                   required
                 />
+                <small id="fatherNameAlert" class="smallValidation">Name should be of 2 to *40 characters</small>
               </div>
               <div class="form-group">
                 <label for="phoneNumber">Phone Number</label>
                 <input
-                  type="text"
+                  type="number"
                   class="form-control inputFormInput"
                   name="phone_number"
                   id="phoneNumber"
                   placeholder="Phone Number"
                   required
                 />
+                <small id="phoneNumberAlert" class="smallValidation">Phone number should be of 10 digits</small>
               </div>
               <div class="form-group">
                 <label for="birthDate">Date Of Birth</label>
@@ -90,6 +93,7 @@
                   placeholder="Email of the Student"
                   required
                 />
+                <small id="emailNameAlert" class="smallValidation">Submit your current email address</small>
               </div>
               <div class="form-group">
                 <label for="inputAddress">Address</label>
@@ -101,6 +105,7 @@
                   placeholder="221B Baker Street"
                   required
                 />
+                <small id="inputAddressAlert" class="smallValidation">Provide your permanent address</small>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-4">
@@ -113,6 +118,7 @@
                     placeholder="PIN Code"
                     required
                   />
+                <small id="inputZipAlert" class="smallValidation">PIN Code should be of 6 digits</small>
                 </div>
                 <div class="form-group col-md-4">
                   <label for="inputCity">City</label>
@@ -124,6 +130,7 @@
                     placeholder="City Name"
                     required
                   />
+                <small id="inputCityAlert" class="smallValidation">City name should be of 2 to *40 characters</small>
                 </div>
                 <div class="form-group col-md-4">
                   <label for="inputState">State</label>
@@ -135,6 +142,7 @@
                     placeholder="State Name"
                     required
                   />
+                <small id="inputStateAlert" class="smallValidation">State name should be of 2 to *40 characters</small>
                 </div>
               </div>
             </div>
@@ -162,6 +170,7 @@
                     accept="image/jpg, image/jpeg, image/png, application/pdf"
                     required
                   />
+                  <small id="marksSheetTenthAlert" class="smallValidation">Size should be less than *1MB</small>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="marksSheetTwelve">12th MarkSheet</label>
@@ -173,6 +182,7 @@
                     accept="image/jpg, image/jpeg, image/png, application/pdf"
                     required
                   />
+                  <small id="marksSheetTwelveAlert" class="smallValidation">Size should be less than *1MB</small>
                 </div>
               </div>
               <div class="form-row">
@@ -186,6 +196,7 @@
                     accept="image/jpg, image/jpeg, image/png, application/pdf"
                     required
                   />
+                  <small id="adharCardAlert" class="smallValidation">Size should be less than *1MB</small>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="passportSizePhoto">Passport Size Photo</label>
@@ -197,6 +208,7 @@
                     accept="image/jpg, image/jpeg, image/png, application/pdf"
                     required
                   />
+                  <small id="passportSizePhotoAlert" class="smallValidation">Size should be less than *1MB</small>
                 </div>
               </div>
               <div class="form-row">
@@ -210,6 +222,7 @@
                     accept="image/jpg, image/jpeg, image/png, application/pdf"
                     required
                   />
+                  <small id="tranferCertificateAlert" class="smallValidation">Size should be less than *1MB</small>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="migrationCertificate">Migration Certicate</label>
@@ -221,6 +234,7 @@
                     accept="image/jpg, image/jpeg, image/png, application/pdf"
                     required
                   />
+                  <small id="migrationCertificateAlert" class="smallValidation">Size should be less than *1MB</small>
                 </div>
               </div>
               <div class="form-row">
@@ -233,11 +247,12 @@
                     id="jeemainsCertificate"
                     accept="image/jpg, image/jpeg, image/png, application/pdf"
                   />
+                  <small id="jeemainsCertificateAlert" class="smallValidation">Size should be less than *1MB</small>
                 </div>
               </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary submitBtn">Submit</button>
+          <button type="submit" id="submitBtnId" class="btn btn-primary submitBtn">Submit</button>
         </form>
       </div>
     </div>

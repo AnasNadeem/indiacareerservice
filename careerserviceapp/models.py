@@ -36,7 +36,7 @@ class Registration(models.Model):
     #Personal Details 
     student_name = models.CharField(max_length=100)
     father_name = models.CharField(max_length=100)
-    phone_number = models.IntegerField()
+    phone_number = models.BigIntegerField()
     date_of_birth = models.CharField(max_length=200)
     email = models.CharField(max_length=70)
     address = models.TextField()
