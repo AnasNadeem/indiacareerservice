@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from careerserviceapp.models import whyUs, Reviews, ourAchievement, AboutUs, ContactUs, Registration, SocialNetworkLink
+from careerserviceapp.models import whyUs, Reviews, ourAchievement, AboutUs, ContactUs, Registration, SocialNetworkLink, keyWords, ContactDetails, MainText, CollegeWithUs
 from django.contrib import messages
 # Create your views here.
 def home(request):
@@ -9,16 +9,26 @@ def home(request):
     ourachievement = ourAchievement.objects.all()
     aboutus = AboutUs.objects.all()
     socialPlat = SocialNetworkLink.objects.all()
+    keywords = keyWords.objects.all()
+    maintext = MainText.objects.all()
+    college = CollegeWithUs.objects.all()
     context = {
         'whyUs': whyus,
         'reviews': reviews,
         'ourAchievement': ourachievement,
         'aboutUs': aboutus,
-        'social': socialPlat
+        'social': socialPlat,
+        'keywrds': keywords,
+        'maintxt': maintext,
+        'colleges': college
     }
     return render(request, 'index.html', context)
 
 def contactUs(request):
+    contDetails = ContactDetails.objects.all()
+    context = {
+        'contact': contDetails
+    }
     if request.method == 'POST':
         name = request.POST.get('submitter_name')
         email = request.POST.get('submitter_email')
@@ -27,18 +37,20 @@ def contactUs(request):
         form = ContactUs(name=name, email=email, phone_num=phone_num, message=message)
         form.save()
         messages.info(request, f"{name}, your query has been registered successfully. We will be in touch very soon.")
-    return render(request, 'contact.html')
+    return render(request, 'contact.html', context)
 
 def about(request):
     whyus = whyUs.objects.all()
     aboutus = AboutUs.objects.all()
     ourachievement = ourAchievement.objects.all()
     socialPlat = SocialNetworkLink.objects.all()
+    keywords = keyWords.objects.all()
     context = {
         'whyUs': whyus,
         'aboutUs': aboutus,
         'ourAchievement': ourachievement,
-        'social': socialPlat
+        'social': socialPlat,
+        'keywrds': keywords,
     }
     return render(request, 'about.html', context)
 

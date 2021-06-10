@@ -5,7 +5,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    {% for i in keywrds %}
+    <meta name="keywords" content="{{ i.title }}">
+    {% endfor %}
     <!-- Bootstrap CSS  -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <!-- StyleIndex CSS  -->
@@ -72,8 +74,8 @@
     <!-- FontAwesome JS  -->
     <!-- <script src="https://kit.fontawesome.com/7a10e3388d.js" crossorigin="anonymous"></script> -->
     <!-- Preloader JS  -->
-    <script src="{% static 'js/theboss.js' %}"></script>
-    <script src="{% static 'js/registerauthen.js' %}"></script>
+    <!-- <script src="{% static 'js/theboss.js' %}"></script> -->
+    {% block jsCont %}{% endblock jsCont %}
 </body>
 
 </html>

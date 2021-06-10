@@ -31,23 +31,24 @@
           <span>Contact Us</span>
           <h2>Quick Touch</h2>
         </div>
+        {% for i in contact %}
         <div class="contact-widget">
           <div class="contactUsIcons">
             <i class="fa fa-map-marker-alt"></i>
-            <p>333 Middle Winchendon Rd, Rindge,<br /> NH 03461</p>
+            <p>{{i.address}}</p>
           </div>
           <div class="contactUsIcons">
             <i class="fa fa-mobile-alt"></i>
             <ul>
-              <li>125-711-811</li>
-              <li>125-668-886</li>
+              <li>{{i.phone_num}}</li>
             </ul>
           </div>
           <div class="contactUsIcons email">
             <i class="fa fa-envelope"></i>
-            <p>Support.gymcenter@gmail.com</p>
+            <p>{{ i.gmail }}</p>
           </div>
         </div>
+        {% endfor %}
       </div>
       <div class="col-lg-6">
         <div class="leave-comment">

@@ -73,4 +73,28 @@ class SocialNetworkLink(models.Model):
     def __str__(self):
         return self.title
     
-    
+class keyWords(models.Model):
+    title = models.TextField()
+    def __str__(self):
+        return self.title
+
+class ContactDetails(models.Model):
+    address = models.TextField()
+    phone_num = models.CharField(max_length=50)
+    gmail = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.gmail
+
+class MainText(models.Model):
+    words = models.CharField(max_length=200)
+    def __str__(self):
+        return self.words
+
+class CollegeWithUs(models.Model):
+    image = models.ImageField(upload_to="college_us")
+    link = models.CharField(max_length=200)
+    title = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.title

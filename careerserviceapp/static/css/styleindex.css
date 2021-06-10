@@ -559,6 +559,48 @@ li {
   color: var(--mainCol);
 }
 /* Join Us section Ends  */
+.collegeWithUs{
+  width: 100%;
+  height: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.college_logos{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+
+.section-title-college {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.section-title-college span {
+  font-size: 36px;
+  color: var(--mainCol);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section-title-college h2 {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.college_title{
+  margin-top: 1rem;
+  line-height: 1.2;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--mainCol);
+}
+
 /* Media Queries Begins  */
 @media (max-width: 399px) {
   .mainSec{
